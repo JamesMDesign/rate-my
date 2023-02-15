@@ -1,0 +1,23 @@
+$background-col-nav: #d66565;
+$text-col-title: white;
+$text-col-subtitle: white;
+
+.nav {
+    background-color: $background-col-nav;
+}
+
+.text-col-title {
+    color: $text-col-title;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.text-col {
+    color: $text-col-subtitle;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace ;
+    margin-right: 10px;
+    text-decoration: none;
+}
