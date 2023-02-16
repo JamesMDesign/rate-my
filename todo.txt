@@ -1,14 +1,21 @@
 to do
 
-1 // a single page application
+1 \/    // a single page application       
+
 2 // visually appealing UI
-3 // consistent navigation structure
 
-4 // component showing posts in the form of social cards that contain each posts content
+3 \/    // consistent navigation structure
 
-5 // each of the cards may consist of several react components to display the different parts of the posts
+4 \/    // component showing posts in the form of social cards that contain each posts content
+
+5 \/    // each of the cards may consist of several react components to display the different parts of the posts
+
 6 // each card at a minimum contain a username, some post text, an icon for like with the number of like
+
 7 // working like button
-8 // a page using a form allowing user to add additional posts
-9 // the add post page should include form elements to allow the adding of the elements required for the card
+
+8 \/    // a page using a form allowing user to add additional posts
+
+9 \/    // the add post page should include form elements to allow the adding of the elements required for the card
+
 10 // when posts are added, the user should be appropriately notified using toastr

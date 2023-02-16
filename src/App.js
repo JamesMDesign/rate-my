@@ -35,7 +35,7 @@ function App() {
           path="/Test1"
           element={<div> test1 </div>}
         />
-        <Route exact path="/" element={<View addpost={listItems} updateListItems={(post) => updateListItems(post)}/>} />
+        <Route exact path="/" element={<View addPost={listItems} updateListItems={(post) => updateListItems(post)}/>} />
         
       </Routes>
 

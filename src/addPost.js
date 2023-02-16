@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-// import  toastr from "toastr";
-// import "toastr/build/toastr.min.css";
+import  toastr from "toastr";
+import "toastr/build/toastr.min.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
@@ -8,27 +8,28 @@ function AddPost(props) {
     const [formValues, setFormValues] = useState({
        //Add placeholder posts
         userName: "",
-        // image: "",
+        title: "",
+        image: "",
         description: "",
       });
       
-    //   toastr.options = {
-    //     "closeButton": false,
-    //     "debug": false,
-    //     "newestOnTop": false,
-    //     "progressBar": true,
-    //     "positionClass": "toast-top-right",
-    //     "preventDuplicates": false,
-    //     "onclick": null,
-    //     "showDuration": "300",
-    //     "hideDuration": "1000",
-    //     "timeOut": "5000",
-    //     "extendedTimeOut": "1000",
-    //     "showEasing": "swing",
-    //     "hideEasing": "linear",
-    //     "showMethod": "fadeIn",
-    //     "hideMethod": "fadeOut"
-    //   }
+      toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+      }
       
 const handleChange = (event) => {
     const newState = {...formValues}
@@ -45,10 +46,11 @@ const submitHandler = (event) => {
     event.preventDefault()
     props.onSubmit(formValues)
     console.log(formValues)
-    // toastr["info"]("Your post has been added", "Success")
+    toastr["info"]("Your post has been added", "Success")
     setFormValues({
         userName: "",
-        // image: "",
+        title: "",
+        image: "",
         description: "",
     });
     
@@ -56,11 +58,10 @@ const submitHandler = (event) => {
 
     return (
         <div>
-            {/* onSubmit event goes in here */}
             <Form onSubmit={(event) => submitHandler(event)}>
                 <Form.Group controlId="userName">
                     <Form.Label>
-                        User name
+                        Username
                     </Form.Label>
                     <Form.Control 
                     name="userName"
@@ -69,17 +70,29 @@ const submitHandler = (event) => {
                     
                     />
                 </Form.Group>
-                {/* <Form.Group controlId="image"> 
+
+                <Form.Group controlId="title">
                     <Form.Label>
-                        Attachment
+                        Title
                     </Form.Label>
                     <Form.Control 
-                    name="image"
-                    type="file"
+                    name="title"
                     onChange={(event) => handleChange(event)}
                     
                     />
-                </Form.Group>  */}
+                </Form.Group>
+
+                <Form.Group controlId="image"> 
+                    <Form.Label>
+                        Enter img url
+                    </Form.Label>
+                    <Form.Control 
+                    name="image"
+                    type="text"
+                    onChange={(event) => handleChange(event)}
+                    />
+                </Form.Group> 
+
                 <Form.Group controlId="description">
                     <Form.Label>
                         Description
@@ -97,6 +110,7 @@ const submitHandler = (event) => {
                 </Button>
 
             </Form>
+
         </div>
     );
 }
