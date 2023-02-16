@@ -7,13 +7,14 @@ function NavigationBar() {
     <Container>
       <Navbar bg="primary" variant="dark">
         <Navbar.Brand href="#/">  
-        <img
+        {/* <img
           src="logo.png"
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
+          width="60"
+          height="25"
+          className="d-inline-block text-col-logo"
           alt="Rate My... logo"
-        />
+        /> */}
+        <p>r8 my dog</p>
       </Navbar.Brand>
       <Nav className="me-auto">
         <Link to="/Test1" className="text-col">Test1</Link>
