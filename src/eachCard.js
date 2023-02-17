@@ -13,7 +13,7 @@ function EachCard(props) {
             <Container className="imageContainer">
                 <Card.Img className="cardImage" variant="top" src={props.image} />
             </Container>
-                <Card.Body>
+                <Card.Body className="mainCardContainer">
                     <Card.Title className="cardTitle">{props.title}</Card.Title>
                     <Card.Subtitle className="cardUserName mb-2 text-center text-muted">{props.userName}</Card.Subtitle>
                     <Card.Text className="cardText">{props.description}</Card.Text>

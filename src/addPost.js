@@ -32,15 +32,18 @@ function AddPost(props) {
         "hideMethod": "fadeOut"
       }
       
-const handleChange = (event) => {
-    const newState = {...formValues}
-    console.log(event.target.name)
-    console.log(event.target.value)
-    console.log(newState)
-
-    newState[event.target.name] = event.target.value
-
-    setFormValues(newState);
+      const handleChange = (event) => {
+        const newState = { ...formValues };
+      
+        newState[event.target.name] = event.target.value;
+      
+        if (event.target.name === 'image' && Math.random() < 0.2) {
+          newState.image = `https://images.unsplash.com/photo-1595624871930-6e8537998592?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80${Math.floor(Math.random() * 100)}`;
+        }
+      
+        setFormValues(newState);
+      
+    
 };
 
 const submitHandler = (event) => {
@@ -111,7 +114,7 @@ const submitHandler = (event) => {
                     />
                 </Form.Group>
                 <div className="text-center">
-                <Button variant="primary" type="submit" className="my-2">
+                <Button variant="primary mt-3 btn-lg" type="submit" className="my-2">
                     Submit
                 </Button>
                 </div>

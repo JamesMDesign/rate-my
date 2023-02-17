@@ -7,30 +7,25 @@ import Container from 'react-bootstrap/Container';
 import Like from './Like';
 import EachCard from './eachCard';
 import { Row } from 'react-bootstrap';
-
+import { reverse } from 'lodash';
 function View(props) {
-
     const buildCards = () => {
-        return <Row className='view-row'>
-            {
-                props.addPost.map(post => 
-                <EachCard 
-                    {
-                        ...post
-                    }
-                />)
-            }
-        </Row>
+        const reversedPosts = [...props.addPost].reverse();
+        return (
+            <Row className='view-row'>
+                {reversedPosts.map(post => (
+                    <EachCard {...post} />
+                ))}
+            </Row>
+        );
     };
-
     return (
         <>
             <AddPost onSubmit={(addPost) => props.updateListItems(addPost)} />
-            <Container className="cardContainer container-fluid">        
-                {buildCards()}
+            <Container className="cardContainer container-fluid">
+                {reverse(buildCards())}
             </Container>
-        </>    
+        </>
     );
 };
-            
 export default View;

@@ -12,7 +12,7 @@ body{
 }
 
 .color-nav {
-    background-color: #ffffff25;
+    background: linear-gradient(rgba(105, 128, 255, 0.241) 86%, rgba(105, 128, 255, 0.45) 94%, rgba(0, 0, 0, 0.85));
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     margin-bottom: 20px;
 }
@@ -51,24 +51,31 @@ body{
 
 
 //Card styling
-
-
 .card-body{
     background-color: #303bdb37;
     max-height: 200px;
-    width: 100%;
     border-radius: 5px;
     margin-bottom: 7px;
+
 }
 
 .cardContainer {
     border-radius: 5px;
-    
 
+}
+.mainCardContainer {
+    width: 320px;
+}
+
+.cardImage {
+    border-radius: 5px;
+    max-height: 350px;
+    width: 350px;
+    max-width: 100%;
 }
 
 .postCard {
-    background-color: #fff;
+    background-color: #ffffff;
     width: 24rem; 
     font-family: 'Poppins', sans-serif;
     display: flex;
@@ -79,7 +86,6 @@ body{
     padding: 1em;
     border-radius: 5px;
     box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
-    // box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 
 .cardTitle {
@@ -87,11 +93,12 @@ body{
     font-weight: 400;
     margin: 10px;
     text-align: center;
-    color: #5e5e5e1a;
-    text-shadow: 1px 1px 2px #000000;
+    color: #3d3d3d;
+    
 }
 
 .cardUserName {
+    
     font-style: italic;
     font-weight: 200;
     color: rgba(127, 23, 127, 0.335);
@@ -100,22 +107,16 @@ body{
 .cardText {
     padding: 10px;
     background-color: rgba(105, 128, 255, 0.241);
-    color: rgb(35, 35, 35);
+    color: rgb(25, 25, 25);
 }
 
-.cardImage {
-        // background-color: green;
-    
-    border-radius: 1em;
-    max-height: 350px;
-    max-width: 100%;
-}
+
 
 //Like Button styling
 
 .likeButton {
     background-color: #f0f0f0;
-    border-color: rgba(27, 46, 253, 0.6);
+    border-color: rgba(44, 37, 251, 0.6);
     border-width: 0.15em;
     margin: 0.5em;
     align-items: center;
@@ -134,27 +135,17 @@ body{
     --bs-btn-bg: rgba(105, 128, 255, 0.241);
     --bs-btn-border-color: rgb(0, 22, 147);
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #d70b0b;
+    --bs-btn-hover-bg: rgba(44, 37, 251, 0.45);
     --bs-btn-hover-border-color: #000000;
     --bs-btn-focus-shadow-rgb: 49,132,253;
-    // --bs-btn-active-color: #fff;
-    // --bs-btn-active-bg: #0a58ca;
-    // --bs-btn-active-border-color: #0abe31;
+
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    // --bs-btn-disabled-color: #fff;
-    // --bs-btn-disabled-bg: #0d59fd;
-    // --bs-btn-disabled-border-color: #0d6efd;
+
 }
 
-// .btn:hover {
-//     color: green !important;
-//     background-color: rgba(240, 46, 169, 0.63);
-//     border-color: rgba(240, 46, 169, 0.63);
-// }
+
 .imageContainer {
-    // background-color: green;
     padding: 1em;
     object-fit: cover;
-    // border-radius: 50px;
     
 }
