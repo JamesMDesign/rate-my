@@ -10,11 +10,11 @@ import { Row } from 'react-bootstrap';
 
 function View(props) {
 
-
     const buildCards = () => {
         return <Row className='view-row'>
             {
-                props.addPost.map(post => <EachCard 
+                props.addPost.map(post => 
+                <EachCard 
                     {
                         ...post
                     }
@@ -25,19 +25,12 @@ function View(props) {
 
     return (
         <>
-        <AddPost onSubmit={(addPost) => props.updateListItems(addPost)} />
-
-        <Container className="cardContainer container-fluid">
-        
-            {buildCards()}
-
-        </Container>
-
-           
-                
-                
+            <AddPost onSubmit={(addPost) => props.updateListItems(addPost)} />
+            <Container className="cardContainer container-fluid">        
+                {buildCards()}
+            </Container>
         </>    
     );
-} 
+};
             
 export default View;

@@ -3,10 +3,11 @@ import  toastr from "toastr";
 import "toastr/build/toastr.min.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import './addPost.scss';
+import { Container } from "react-bootstrap";
 
 function AddPost(props) {
     const [formValues, setFormValues] = useState({
-       //Add placeholder posts
         userName: "",
         title: "",
         image: "",
@@ -43,22 +44,30 @@ const handleChange = (event) => {
 };
 
 const submitHandler = (event) => {
-    event.preventDefault()
-    props.onSubmit(formValues)
-    console.log(formValues)
-    toastr["info"]("Your post has been added", "Success")
+    event.preventDefault();
+    // Check if any input field is empty
+    if (Object.values(formValues).some(value => value === "")) {
+        toastr["error"]("Please fill out all fields", "Error");
+        return;
+    }
+    // Submit the form if all fields are filled out
+    props.onSubmit(formValues);
+    toastr["info"]("Your post has been added", "Success");
     setFormValues({
         userName: "",
         title: "",
         image: "",
         description: "",
     });
+};
     
-}
+
+
+   
 
     return (
-        <div>
-            <Form onSubmit={(event) => submitHandler(event)}>
+        <Container>
+            <Form onSubmit={(event) => submitHandler(event)} className="inputForm">
                 <Form.Group controlId="userName">
                     <Form.Label>
                         Username
@@ -67,7 +76,6 @@ const submitHandler = (event) => {
                     name="userName"
                     type="text"
                     onChange={(event) => handleChange(event)}
-                    
                     />
                 </Form.Group>
 
@@ -77,8 +85,7 @@ const submitHandler = (event) => {
                     </Form.Label>
                     <Form.Control 
                     name="title"
-                    onChange={(event) => handleChange(event)}
-                    
+                    onChange={(event) => handleChange(event)}                    
                     />
                 </Form.Group>
 
@@ -100,89 +107,17 @@ const submitHandler = (event) => {
                     <Form.Control 
                     name="description"
                     type="text"
-                    onChange={(event) => handleChange(event)}
-                    
+                    onChange={(event) => handleChange(event)}                    
                     />
                 </Form.Group>
-
-                <Button variant="primary" type="submit">
+                <div className="text-center">
+                <Button variant="primary" type="submit" className="my-2">
                     Submit
                 </Button>
-
+                </div>
             </Form>
-
-        </div>
+        </Container>
     );
-}
+};
 
 export default AddPost;
-
-// function Add(props){
-// 	const [formValues, setFormValues] = useState({
-// 		id: 0,
-// 		description: "",
-// 	});
-
-
-
-// const handleChange = (event) => {
-//     const newState = {...formValues}
-
-//     if (event.target.name === "completed") {
-//         newState[event.target.name] = !formValues.completed
-//     } else {
-//         newState[event.target.name] = event.target.value;
-//     }
-
-
-
-// const submitHandler = (event) => {
-//     event.preventDefault()
-//     props.onSubmit(formValues)
-//     toastr["success"]("Todo added", "Success")
-//     setFormValues({
-//         id: 0,
-//         description: "",
-//         completed: false,
-//     })
-// };
-
-
-
-// return (
-//     <div>
-//         <Form onSubmit={(event) => submitHandler(event)}>
-//             <Form.Group controlId="taskID">
-//                 <Form.Label> Task ID</Form.Label>
-//                 <Form.Control 
-//                 name="id" 
-//                 type="number" 
-//                 onChange={(event) => handleChange(event)}
-//                 />
-//             </Form.Group>
-
-//             <Form.Group controlId="taskDescription">
-//                 <Form.Label> Description</Form.Label>
-//                 <Form.Control 
-//                 name="description" 
-//                 type="text" 
-//                 onChange={(event) => handleChange(event)}
-//                 />
-//             </Form.Group>
-
-//             <Form.Group controlId="complete">
-//                 <Form.Check 
-//                 type="checkbox"
-//                 id="complete"
-//                 label="Completed?"
-//                 name="completed"
-//                 onChange={(event) => handleChange(event)}
-//                 />
-//             </Form.Group>
-
-//             <Button variant="primary" type="submit">
-//                 Submit
-//             </Button>
-//         </Form>
-//     </div>
-// );
