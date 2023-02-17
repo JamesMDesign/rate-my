@@ -1,28 +1,160 @@
-$background-col-nav: #d66565;
-$text-col-title: white;
-$text-col-subtitle: white;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,200&display=swap');
 
-.nav {
-    background-color: $background-col-nav;
+body{
+    background-color: #ececec42;
+}
+
+.logotext {
+    color:#000000;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.color-nav {
+    background-color: #ffffff25;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    margin-bottom: 20px;
+}
+
+.logo{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 50px;
 }
 
 .text-col-title {
-    color: $text-col-title;
     font-size: large;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Poppins', sans-serif;
     margin-right: 10px;
     text-decoration: none;
 }
 
 .text-col {
-    color: $text-col-subtitle;
     font-size: medium;
-    font-family: 'Courier New', Courier, monospace ;
-    margin-right: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.75em;
+    margin-right: 1em;
     text-decoration: none;
 }
 
 .text-col-logo {
     margin-right: 10px;
-    align: top;
+    
+}
+
+.row.view-row {
+    justify-content: center;
+}
+
+
+
+//Card styling
+
+
+.card-body{
+    background-color: #303bdb37;
+    max-height: 200px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 7px;
+}
+
+.cardContainer {
+    border-radius: 5px;
+    
+
+}
+
+.postCard {
+    background-color: #fff;
+    width: 24rem; 
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
+    // box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 10px;
+    text-align: center;
+    color: #5e5e5e1a;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.cardUserName {
+    font-style: italic;
+    font-weight: 200;
+    color: rgba(127, 23, 127, 0.335);
+}
+
+.cardText {
+    padding: 10px;
+    background-color: rgba(105, 128, 255, 0.241);
+    color: rgb(35, 35, 35);
+}
+
+.cardImage {
+        // background-color: green;
+    
+    border-radius: 1em;
+    max-height: 350px;
+    max-width: 100%;
+}
+
+//Like Button styling
+
+.likeButton {
+    background-color: #f0f0f0;
+    border-color: rgba(27, 46, 253, 0.6);
+    border-width: 0.15em;
+    margin: 0.5em;
+    align-items: center;
+}
+
+.btn:hover {
+    color: var(--bs-btn-hover-color);
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color);
+  }
+
+// Submit Button styling
+
+.btn-primary {
+    --bs-btn-color: #000000;
+    --bs-btn-bg: rgba(105, 128, 255, 0.241);
+    --bs-btn-border-color: rgb(0, 22, 147);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #d70b0b;
+    --bs-btn-hover-border-color: #000000;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    // --bs-btn-active-color: #fff;
+    // --bs-btn-active-bg: #0a58ca;
+    // --bs-btn-active-border-color: #0abe31;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    // --bs-btn-disabled-color: #fff;
+    // --bs-btn-disabled-bg: #0d59fd;
+    // --bs-btn-disabled-border-color: #0d6efd;
+}
+
+// .btn:hover {
+//     color: green !important;
+//     background-color: rgba(240, 46, 169, 0.63);
+//     border-color: rgba(240, 46, 169, 0.63);
+// }
+.imageContainer {
+    // background-color: green;
+    padding: 1em;
+    object-fit: cover;
+    // border-radius: 50px;
+    
 }
