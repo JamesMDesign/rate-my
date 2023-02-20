@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/%7Brate-my%7D/static/css/main.dd44048f.css",
-    "main.js": "/%7Brate-my%7D/static/js/main.509d0198.js",
-    "static/js/787.1628d982.chunk.js": "/%7Brate-my%7D/static/js/787.1628d982.chunk.js",
-    "index.html": "/%7Brate-my%7D/index.html",
-    "static/media/logo.svg": "/%7Brate-my%7D/static/media/logo.2223dfdf65d6a696bc99ab9435eb5e11.svg",
-    "main.dd44048f.css.map": "/%7Brate-my%7D/static/css/main.dd44048f.css.map",
-    "main.509d0198.js.map": "/%7Brate-my%7D/static/js/main.509d0198.js.map",
-    "787.1628d982.chunk.js.map": "/%7Brate-my%7D/static/js/787.1628d982.chunk.js.map"
+    "main.css": "/rate-my/static/css/main.dd44048f.css",
+    "main.js": "/rate-my/static/js/main.eff4d4f7.js",
+    "static/js/787.1628d982.chunk.js": "/rate-my/static/js/787.1628d982.chunk.js",
+    "static/media/logo.svg": "/rate-my/static/media/logo.2223dfdf65d6a696bc99ab9435eb5e11.svg",
+    "index.html": "/rate-my/index.html",
+    "main.dd44048f.css.map": "/rate-my/static/css/main.dd44048f.css.map",
+    "main.eff4d4f7.js.map": "/rate-my/static/js/main.eff4d4f7.js.map",
+    "787.1628d982.chunk.js.map": "/rate-my/static/js/787.1628d982.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dd44048f.css",
-    "static/js/main.509d0198.js"
+    "static/js/main.eff4d4f7.js"
   ]
 }
